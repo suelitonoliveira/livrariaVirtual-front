@@ -14,3 +14,13 @@
 .table{
     width: 100%;
 }
+.edit{
+    color: black;
+}
+.delete{
+    color: black;
+    margin-left: .5rem;
+}
+.mat-header{
+    width: 5rem;
+}
