@@ -2,6 +2,12 @@
     <div class="title">
         <h1>CATEGORIA</h1>
     </div>
+    <a href="#">
+        <button class="mat-elevation-z8 content-table" mat-stroked-button>NOVA CATEGORIA</button>
+    </a>
+   
+   
+
     <div class="mat-elevation-z8 content-table">
         <table class="table" mat-table [dataSource]="categorias">
 
@@ -23,6 +29,17 @@
                 <td mat-cell *matCellDef="let row"> {{row.descricao}} </td>
             </ng-container>
 
+            <ng-container matColumnDef="livros">
+                <th mat-header-cell *matHeaderCellDef> LIVROS </th>
+                <td mat-cell *matCellDef="let row">
+
+                    <a class="livros" href="#">
+                        <i  class="material-icons">book</i>
+                    </a>
+                </td>
+
+            </ng-container>
+
             <!-- Symbol Column -->
             <ng-container matColumnDef="acoes">
                 <th class="mat-header" mat-header-cell *matHeaderCellDef> AÇÕES </th>
@@ -30,7 +47,7 @@
                     <a class="edit" href="#">
                         <i class="material-icons">edit</i>
                     </a>
-                    <a  class="delete" href="#">
+                    <a class="delete" href="#">
                         <i class="material-icons">delete</i>
                     </a>
                 </td>

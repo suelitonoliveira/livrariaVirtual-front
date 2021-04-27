@@ -11,8 +11,17 @@
     color: black;
     font-weight: 500;
 }
+button{
+    margin-bottom: .8rem;
+   background-color: azure;
+}
 .table{
     width: 100%;
+}
+.livros{
+    color: black;
+    margin-left: .5rem;
+    
 }
 .edit{
     color: black;
