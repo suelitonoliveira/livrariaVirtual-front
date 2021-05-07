@@ -28,6 +28,10 @@ export class CategoriaService {
     const url =  `${this.baseUrl}/categorias`
     return this.http.post<Categoria>(url,categoria);
   }
+  delete(id: String):Observable<void>{
+    const url = `${this.baseUrl}/categorias/${id}`
+    return this.http.delete<void>(url)
+  }
 
   mensagem(str: String): void{
     this._snack.open(`${str}`,`OK`,{
