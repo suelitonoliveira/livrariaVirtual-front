@@ -4,11 +4,12 @@ import { Categoria } from '../categoria.model';
 import { CategoriaService } from '../categoria.service';
 
 @Component({
-  selector: 'app-categoria-delete',
-  templateUrl: './categoria-delete.component.html',
-  styleUrls: ['./categoria-delete.component.css']
+  selector: 'app-categoria-update',
+  templateUrl: './categoria-update.component.html',
+  styleUrls: ['./categoria-update.component.css']
 })
-export class CategoriaDeleteComponent implements OnInit {
+export class CategoriaUpdateComponent implements OnInit {
+
 
   categoria: Categoria = {
     id: '',
@@ -23,23 +24,25 @@ export class CategoriaDeleteComponent implements OnInit {
     this.findById()
   }
 
-  findById():void{
-    this.service.findById(this.categoria.id!).subscribe((resposta) =>{
+  findById(): void {
+    this.service.findById(this.categoria.id!).subscribe((resposta) => {
       this.categoria.nome = resposta.nome
       this.categoria.descricao = resposta.descricao
-    })
+    });
   }
-  delete(): void{
-    this.service.delete(this.categoria.id!).subscribe((resposta) =>{
+  update(): void {
+    this.service.update(this.categoria).subscribe((resposta) => {
       this.router.navigate(['categorias']);
-      this.service.mensagem('Categoria Deletada com Sucesso!');
+      this.service.mensagem("Categoria atualizada com Sucesso!");
     }, err => {
       for (let i = 0; i < err.error.errors.length; i++) {
         this.service.mensagem(err.error.errors[i].message)
       }
     });
   }
-  cancel(): void{
+
+  cancel(): void {
     this.router.navigate(['categorias'])
   }
+
 }
