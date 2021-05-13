@@ -1,0 +1,23 @@
+<form>
+    <h1>CRIANDO NOVO LIVRO</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Titulo</mat-label>
+        <input matInput type="text" name="titulo" placeholder="Ex. Curso spring boot com Angular 10" maxlength="100">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Nome do Autor</mat-label>
+        <input matInput type="text" name="nome_autor" placeholder="Ex. Sueliton de oliveira" maxlength="100">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Texto</mat-label>
+        <textarea matInput type="text" name="texto" placeholder="Ex. Lorem ipsum" maxlength="2000000"></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button class="mat-elevation-z8" mat-stroked-button> CRIAR </button>
+        <button  class="mat-elevation-z8" mat-stroked-button color="warn"> CANCELAR </button>
+    </div>
+
+</form>
