@@ -16,7 +16,7 @@
     </mat-form-field>
 
     <div class="buttons">
-        <button [disabled]="getMessage()" class="mat-elevation-z8" mat-stroked-button> DELETAR </button>
+        <button (click)="delete()" class="mat-elevation-z8" mat-stroked-button> DELETAR </button>
         <button  (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn"> CANCELAR </button>
     </div>
 
